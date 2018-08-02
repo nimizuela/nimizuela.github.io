@@ -17,6 +17,6 @@ flickr_username:
 github_username:  "#"
 feed_icon: rss
 email: "#"
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 paginate_path: "/page/:num/"
 paginate: 5
