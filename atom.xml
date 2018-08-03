@@ -1,7 +1,7 @@
 ---
 layout: null
 sitemap:
-  exclude: true
+	exclude: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -12,7 +12,7 @@ sitemap:
 	<link href="{{ siteurl }}/" />
 	<id>{{ siteurl }}/</id>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-  {% for post in site.posts limit:10 %}
+	{% for post in site.posts limit:10 %}
 	<entry>
 		<title>{{ post.title | xml_escape }}</title>
 		<link href="{{ post.url | prepend: siteurl }}" />
@@ -29,5 +29,5 @@ sitemap:
 			<name>{{ site.copyright }}</name>
 		</author>
 	</entry>
-  {% endfor %}
+	{% endfor %}
 </feed>
