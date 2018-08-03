@@ -1,7 +1,7 @@
 <title>{% if page.title %}{{ page.title | append:' - ' | append:site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta charset="utf-8" />
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description | markdownify | strip_html }}{% endif %}" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <!--[if lte IE 8]><script src="{{ site.github.url }}/assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css" />
 <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.github.url }}/assets/css/ie8.css" /><![endif]-->

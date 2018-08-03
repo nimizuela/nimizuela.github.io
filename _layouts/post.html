@@ -10,7 +10,7 @@
 		{% include opengraph.html %}
 		{% include twittercard.html %}
 	</head>
-	<body id="top">
+	<body class="is-preload">
 
 		{% include header.html %}
 
@@ -35,14 +35,14 @@
 			{% if page.previous.url or page.next.url %}
 			<hr />
 			<div class="row">
-				<article class="6u 12u$(xsmall) work-item">
+				<article class="col-6 col-12-xsmall work-item">
 					{% if page.previous.url %}
 					<p>Previous</p>
 					<h3><a href="{{ page.previous.url }}">{{page.previous.title}}</a></h3>
 					<p>{{ page.previous.excerpt | strip_html }}</p>
 					{% endif %}
 				</article>
-				<article class="6u$ 12u$(xsmall) work-item">
+				<article class="col-6 col-12-xsmall work-item">
 					{% if page.next.url %}
 					<p>Next</p>
 					<h3><a href="{{ page.next.url }}">{{page.next.title}}</a></h3>
