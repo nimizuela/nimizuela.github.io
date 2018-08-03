@@ -2939,6 +2939,20 @@ input, select, textarea {
 		background-size: auto, cover;
 	}
 
+	@media screen and (orientation:landscape) {
+		body.is-touch #header {
+			height: 150%;
+			padding-bottom: 50%;
+		}
+	}
+
+	@media screen and (orientation:portrait) {
+		body.is-touch #header {
+			height: 100%;
+			padding-bottom: 0;
+		}
+	}
+
 	body.is-touch .poptrox-popup .nav-next,
 	body.is-touch .poptrox-popup .nav-previous,
 	body.is-touch .poptrox-popup .closer {
