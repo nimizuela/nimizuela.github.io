@@ -2565,12 +2565,12 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
-		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-color: #070105;
+		background-attachment: scroll;
+		background-image: url("../../images/bg.jpg");
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-size: 150%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2598,7 +2598,8 @@ input, select, textarea {
 		}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: rgba(248, 225, 150, 0.9);
+			font-size: 1.25em;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
@@ -2606,7 +2607,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.9);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2624,7 +2625,7 @@ input, select, textarea {
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(255, 255, 255, 0.9);
 		}
 
 	#footer .copyright {
@@ -2938,6 +2939,8 @@ input, select, textarea {
 		body.is-touch #header {
 			height: 150%;
 			padding-bottom: 50%;
+			background-size: auto 66.7%;
+			background-position-y: top;
 		}
 	}
 
@@ -2945,6 +2948,8 @@ input, select, textarea {
 		body.is-touch #header {
 			height: 100%;
 			padding-bottom: 0;
+			background-size: 100% auto;
+			background-position-y: center;
 		}
 	}
 
@@ -3030,8 +3035,8 @@ input, select, textarea {
 
 			#header {
 				background-attachment: scroll;
-				background-position: top left, center center;
-				background-size: auto,		cover;
+				background-position: center center, center center;
+				background-size: 100%, auto,		cover;
 				left: auto;
 				padding: 6em 4em;
 				position: relative;
@@ -3053,14 +3058,14 @@ input, select, textarea {
 
 			#footer {
 				background-attachment: scroll;
-				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-				background-position: top left,						bottom center;
-				background-repeat: repeat,							no-repeat;
-				background-size: auto,							cover;
+				background-color: #070105;
+				background-image: url("../../images/bg.jpg");
+				background-position: bottom center;
+				background-repeat: no-repeat;
+				background-size: cover;
 				bottom: auto;
 				left: auto;
-				padding: 4em 4em 6em 4em;
+				padding: 6em 4em;
 				position: relative;
 				text-align: center;
 				width: 100%;
