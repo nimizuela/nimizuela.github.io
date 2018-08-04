@@ -665,15 +665,12 @@ $size-header-pad: 4em;
 			}
 		}
 
-		&.avatar {
-			border-radius: 100%;
-
+		&.logo {
 			&:before {
 				display: none;
 			}
 
 			img {
-				border-radius: 100%;
 				width: 100%;
 			}
 		}
@@ -1095,9 +1092,9 @@ $size-header-pad: 4em;
 			margin: 0;
 		}
 
-		.image.avatar {
+		.image.logo {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 6.25em;
+			width: 10em;
 		}
 	}
 

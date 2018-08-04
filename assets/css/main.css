@@ -2112,16 +2112,11 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		.image.avatar {
-			border-radius: 100%;
-		}
-
-			.image.avatar:before {
+			.image.logo:before {
 				display: none;
 			}
 
-			.image.avatar img {
-				border-radius: 100%;
+			.image.logo img {
 				width: 100%;
 			}
 
@@ -2617,9 +2612,9 @@ input, select, textarea {
 			margin: 0;
 		}
 
-		#header .image.avatar {
+		#header .image.logo {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 10em;
 		}
 
 /* Footer */
