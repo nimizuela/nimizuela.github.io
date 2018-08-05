@@ -1,0 +1,3 @@
+{% if site.facebook_app_id and page.facebook != 'disabled' and page.fbshare %}
+<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&display=popup&ref=plugin&app_id={{ site.facebook_app_id }}" class="icon fa-facebook" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label">Facebook</span></a></li>
+{% endif %}

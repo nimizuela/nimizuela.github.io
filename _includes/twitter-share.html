@@ -1,0 +1,3 @@
+{% if site.twitter_username and page.twitter != 'disabled' and page.twittershare %}
+<li><a href="https://twitter.com/intent/tweet?via={{ site.twitter_username }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | uri_escape}}&text={{ page.title | default:"" | uri_escape}}" class="icon fa-twitter" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label">Twitter</span></a></li>
+{% endif %}

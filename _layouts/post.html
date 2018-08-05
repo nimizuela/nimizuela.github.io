@@ -24,7 +24,12 @@
 					<p>
 						<i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
 						{% include readingtime.html %}
-						{% include facebook-likes.html %}
+						<ul class="icons">
+							{% include facebook-share.html %}
+							{% include twitter-share.html %}
+							{% include email-share.html %}
+							{% include facebook-likes.html %}
+						</ul>
 					</p>
 				</header>
 
