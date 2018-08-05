@@ -17,6 +17,7 @@ flickr_username:
 github_username:  nimizuela
 dribbble_username:
 discord_server: XtFU7qh
+google_analytics: UA-2567801-6
 email: nimizuela@protonmail.com
 feed_icon: rss
 plugins: [jekyll-paginate]
