@@ -8,6 +8,7 @@
 <link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/atom.xml" title="Sitewide ATOM Feed" />
 <link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/rss.xml" title="Sitewide RSS Feed" />
 <link rel="author" type="text/plain" href="{{ site.github.url }}/humans.txt" />
-{% if site.google_analytics and jekyll.environment == 'production' %}
 {% include analytics.html %}
+{% if site.facebook_app_id %}
+<meta property="fb:app_id"       content="{{ site.facebook_app_id }}" />
 {% endif %}

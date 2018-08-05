@@ -12,6 +12,8 @@
 	</head>
 	<body class="is-preload">
 
+		{% include facebook-init.html %}
+
 		{% include header.html %}
 
 		<!-- Main -->
@@ -30,6 +32,7 @@
 				</section>
 			</article>
 
+			{% include facebook-comments.html %}
 			{% include disqus.html %}
 
 			{% if page.previous.url or page.next.url %}
