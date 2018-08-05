@@ -20,6 +20,9 @@
 				{% if site.flickr_username %}
 				<li><a href="https://www.flickr.com/photos/{{ site.flickr_username }}" class="icon fa-flickr"><span class="label">Flickr</span></a></li>
 				{% endif %}
+				{% if site.discord_server %}
+				<li><a href="https://www.discord.gg/{{ site.discord_server }}" class="icon fa-discord"><span class="label">Discord</span></a></li>
+				{% endif %}
 				{% if site.github_username %}
 				<li><a href="https://github.com/{{ site.github_username }}" class="icon fa-github"><span class="label">Github</span></a></li>
 				{% endif %}		  

@@ -16,6 +16,7 @@ pinterest_username:
 flickr_username:
 github_username:  nimizuela
 dribbble_username:
+discord_server: XtFU7qh
 email: nimizuela@protonmail.com
 feed_icon: rss
 plugins: [jekyll-paginate]
