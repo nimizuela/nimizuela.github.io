@@ -3213,7 +3213,8 @@ input, select, textarea {
     	position: relative;
     	padding-bottom: 56.25%; /* 16:9 */
     	padding-top: 25px;
-    	height: 0;
+		height: 0;
+		background: url("images/overlay.png");
 	}
 	.youtube-wrapper iframe {
     	position: absolute;
