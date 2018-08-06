@@ -20,7 +20,7 @@ discord_server: XtFU7qh
 google_analytics: UA-2567801-6
 facebook_app_id: 644672675906757
 email: nimizuela@protonmail.com
-feed_icon: rss
+feed_icon:
 plugins: [jekyll-paginate]
 paginate_path: "/page/:num/"
 paginate: 5
