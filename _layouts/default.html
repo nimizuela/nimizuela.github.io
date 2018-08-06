@@ -7,6 +7,10 @@
 <html>
 	<head>
 		{% include head.html %}
+		{% include analytics.html %}
+		{% if site.facebook_app_id %}
+		<meta property="fb:app_id"       content="{{ site.facebook_app_id }}" />
+		{% endif %}
 		{% include opengraph.html %}
 		{% include twittercard.html %}
 	</head>
