@@ -5,70 +5,70 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		{% include head.html %}
-		{% include analytics.html %}
-		{% if site.facebook_app_id %}
-		<meta property="fb:app_id"       content="{{ site.facebook_app_id }}" />
-		{% endif %}
-		{% include opengraph.html %}
-		{% include twittercard.html %}
-	</head>
-	<body class="is-preload">
+<head>
+	{% include head.html %}
+	{% include analytics.html %}
+	{% if site.facebook_app_id %}
+	<meta property="fb:app_id" content="{{ site.facebook_app_id }}" />
+	{% endif %}
+	{% include opengraph.html %}
+	{% include twittercard.html %}
+</head>
+<body class="is-preload">
 
-		{% include facebook-init.html %}
+	{% include facebook-init.html %}
 
-		{% include header.html %}
+	{% include header.html %}
 
-		<!-- Main -->
-		<div id="main">
-			<article>
-				<header class="major">
-					<h2>{{ page.title }}</h2>
-					<p>
-						<i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
-						{% include readingtime.html %}
-						<ul class="icons">
-							{% include facebook-share.html %}
-							{% include twitter-share.html %}
-							{% include email-share.html %}
-							{% include facebook-likes.html %}
-						</ul>
-					</p>
-				</header>
+	<!-- Main -->
+	<div id="main">
+		<article>
+			<header class="major">
+				<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+				<p>
+					<i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
+					{% include readingtime.html %}
+					<ul class="icons">
+						<li>{% include facebook-share.html %}</li>
+						<li>{% include twitter-share.html %}</li>
+						<li>{% include email-share.html %}</li>
+						<li>{% include facebook-likes.html %}</li>
+					</ul>
+				</p>
+			</header>
 
-				<section>
-					{{ content }}
-				</section>
+			<section>
+				{{ content }}
+			</section>
+		</article>
+
+		{% include facebook-comments.html %}
+		{% include disqus.html %}
+
+		{% if page.previous.url or page.next.url %}
+		<hr />
+		<div class="row">
+			<article class="col-6 col-12-xsmall work-item">
+				{% if page.previous.url %}
+				<p>Previous</p>
+				<h3><a href="{{ page.previous.url }}">{{page.previous.title}}</a></h3>
+				<p>{{ page.previous.excerpt | strip_html }}</p>
+				{% endif %}
 			</article>
-
-			{% include facebook-comments.html %}
-			{% include disqus.html %}
-
-			{% if page.previous.url or page.next.url %}
-			<hr />
-			<div class="row">
-				<article class="col-6 col-12-xsmall work-item">
-					{% if page.previous.url %}
-					<p>Previous</p>
-					<h3><a href="{{ page.previous.url }}">{{page.previous.title}}</a></h3>
-					<p>{{ page.previous.excerpt | strip_html }}</p>
-					{% endif %}
-				</article>
-				<article class="col-6 col-12-xsmall work-item">
-					{% if page.next.url %}
-					<p>Next</p>
-					<h3><a href="{{ page.next.url }}">{{page.next.title}}</a></h3>
-					<p>{{ page.next.excerpt | strip_html }}</p>
-					{% endif %}
-				</article>
-			</div>
-			{% endif %}
-
+			<article class="col-6 col-12-xsmall work-item">
+				{% if page.next.url %}
+				<p>Next</p>
+				<h3><a href="{{ page.next.url }}">{{page.next.title}}</a></h3>
+				<p>{{ page.next.excerpt | strip_html }}</p>
+				{% endif %}
+			</article>
 		</div>
+		{% endif %}
 
-		{% include footer.html %}
-		{% include scripts.html %}
+	</div>
 
-	</body>
+	{% include footer.html %}
+	{% include scripts.html %}
+
+</body>
 </html>
