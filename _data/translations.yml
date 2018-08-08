@@ -1,4 +1,11 @@
 en:
+  title: Project Nimizuela
+  description: >
+    **Project Nimizuela**<br>
+    *...raising awareness about*<br>
+    ***Nimiq*** *in* ***Venezuela***
+  copyright: Project Nimizuela
+  design: Design
   language_name: English
   locale: en_US
   next: Next
@@ -17,6 +24,13 @@ en:
     - November
     - December
 es:
+  title: Proyecto Nimizuela
+  description: >
+    **Proyecto Nimizuela**<br>
+    *...dando a conocer*<br>
+    ***Nimiq*** *en* ***Venezuela***
+  copyright: Proyecto Nimizuela
+  design: Diseño
   language_name: Español
   locale: es_LA
   next: Siguiente
