@@ -7,4 +7,16 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.github.url }}/assets/css/ie8.css" /><![endif]-->
 <link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/atom.xml" title="Sitewide ATOM Feed" />
 <link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/rss.xml" title="Sitewide RSS Feed" />
+{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% for entry in posts %}
+	{% if entry.lang != page.lang %}
+<link rel="alternate" hreflang="{{ entry.lang }}" href="{{ entry.url }}" />
+	{% endif %}
+{% endfor %}
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% for entry in pages %}
+	{% if entry.lang != page.lang %}
+<link rel="alternate" hreflang="{{ entry.lang }}" href="{{ entry.url }}" />
+	{% endif %}
+{% endfor %}
 <link rel="author" type="text/plain" href="{{ site.github.url }}/humans.txt" />
