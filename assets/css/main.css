@@ -3223,3 +3223,14 @@ input, select, textarea {
 		width: 100%;
 		height: 100%;
 	}
+
+/* Language switcher */
+
+	div#lang-selector {
+		float: right;
+	}
+
+	div#lang-selector li {
+		display:inline;
+		margin: 0.5em;
+	}

@@ -1,0 +1,36 @@
+en:
+  language_name: English
+  locale: en_US
+  next: Next
+  prev: Previous
+  months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+es:
+  language_name: Español
+  locale: es_LA
+  next: Siguiente
+  prev: Anterior
+  months:
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre

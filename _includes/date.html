@@ -3,24 +3,7 @@
 {% else %}
 	{% assign entry = page %}
 {% endif %}
-{% if entry.lang == 'es' %}
-	{% assign m = entry.date | date: "%-m" %}
-	{{ entry.date | date: "%-d" }}
-	{% case m %}
-		{% when '1' %}Enero
-		{% when '2' %}Febrero
-		{% when '3' %}Marzo
-		{% when '4' %}Abril
-		{% when '5' %}Mayo
-		{% when '6' %}Junio
-		{% when '7' %}Julio
-		{% when '8' %}Agosto
-		{% when '9' %}Septiembre
-		{% when '10' %}Octubre
-		{% when '11' %}Noviembre
-		{% when '12' %}Diciembre
-	{% endcase %}
-	{{ entry.date | date: "%Y" }}
-{% else %}
-	{{ entry.date | date: "%d %B %Y" }}
-{% endif %}
+{% assign m = entry.date | date: "%-m" | minus: 1 %}
+{{ entry.date | date: "%-d" }}
+{{ site.data.translations[entry.lang].months[m] }}
+{{ entry.date | date: "%Y" }}
