@@ -17,6 +17,10 @@ sitemap:
 			{% else %}
 				<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 			{% endif %}
+    		{% assign versions=site.posts | where:"ref", post.ref %}
+        	{% for version in versions %}
+          		<xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+        	{% endfor %}
 			{% if post.sitemap.changefreq %}
 				<changefreq>{{ post.sitemap.changefreq }}</changefreq>
 			{% else %}
@@ -41,6 +45,10 @@ sitemap:
 			{% else %}
 				<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 			{% endif %}
+        	{% assign versions=site.pages | where:"ref", page.ref %}
+        	{% for version in versions %}
+          		<xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+        	{% endfor %}
 			{% if page.sitemap.changefreq %}
 				<changefreq>{{ page.sitemap.changefreq }}</changefreq>
 			{% else %}
