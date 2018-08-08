@@ -26,7 +26,9 @@
 			<header class="major">
 				<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
 				<p>
-					<i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
+					<i class="fa fa-calendar"></i>
+					{% include date.html %}
+					{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
 					{% include readingtime.html %}
 					<ul class="icons">
 						<li>{% include facebook-share.html %}</li>
