@@ -4,6 +4,7 @@
 	<section class="post-container">
 		<div class="post-thumb"><img src="{{ site.github.url }}/images/thumbs/{{ post.ref }}.jpg" alt="" /></div>
 		<div class="post-content">
+			{% if post.pin %}<i class="post-pin fa fa-thumb-tack"></i>{% endif %}
 			<h2><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h2>
 			<div>
 				{{ post.excerpt }}

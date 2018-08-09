@@ -284,6 +284,13 @@ input, select, textarea {
 				max-width: 100% !important;
 			}
 
+			div#lang-selector a {
+				color: rgba(255, 255, 255, 0.6)
+			}
+
+			div#lang-selector a:hover {
+				color: rgba(248, 225, 150, 0.9) !important;
+			}
 		}
 
 		@media screen and (max-width: 480px) {
@@ -3232,6 +3239,9 @@ input, select, textarea {
 
 	div#lang-selector {
 		float: right;
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
 	div#lang-selector li {
@@ -3242,14 +3252,9 @@ input, select, textarea {
 /* Post preview */
 
 	.post-container {
-    	overflow: auto
+		overflow: auto;
 	}
-	.post-container h1,
-	.post-container h2,
-	.post-container h3,
-	.post-container h4,
-	.post-container h5,
-	.post-container h6 {
+	.post-container h1, .post-container h2, .post-container h3, .post-container h4, .post-container h5, .post-container h6 {
     	margin: 0 0 0.5em 0;
 	}
 	.post-container p {
@@ -3268,4 +3273,10 @@ input, select, textarea {
 	.post-title {
     	font-weight: bold;
     	font-size: 200%
+	}
+	.post-pin {
+		opacity: 0.25;
+		float: right;
+		font-size: 1.5em;
+		margin: 0 0.25em;
 	}
