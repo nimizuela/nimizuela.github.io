@@ -1,13 +1,16 @@
 <!-- This loops through the paginated posts -->
 {% for post in site.posts %}
 	{% if post.lang == page.lang %}
-	<section>
-		<h2><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h2>
-		<p>
-			<span><i class="fa fa-calendar"></i> {% include date.html %}{% if post.categories != empty %} on <i class="fa fa-tags"></i> {{ post.categories | join: ', ' }}{% endif %}</span>
-		</p>
-		<div>
-			{{ post.excerpt }}
+	<section class="post-container">
+		<div class="post-thumb"><img src="{{ site.github.url }}/images/thumbs/{{ post.ref }}.jpg" alt="" /></div>
+		<div class="post-content">
+			<h2><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h2>
+			<div>
+				{{ post.excerpt }}
+			</div>		
+			<p>
+				<span><i class="fa fa-calendar"></i> {% include date.html %} {% include categories.html %}</span>
+			</p>
 		</div>
 	</section>
 	{% endif %}

@@ -30,7 +30,7 @@
 				<p>
 					<i class="fa fa-calendar"></i>
 					{% include date.html %}
-					{% if page.categories != empty %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
+					{% include categories.html %}
 					{% include readingtime.html %}
 					<ul class="icons">
 						<li>{% include facebook-share.html %}</li>

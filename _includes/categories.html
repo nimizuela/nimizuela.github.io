@@ -1,0 +1,6 @@
+{% if post.categories != empty %}
+	{{ assign categories = post.categories | where_exp:"item", "item != post.lang" }}
+	{% if categories.size > 0 %}
+		on <i class="fa fa-tags"></i> {{ categories | join: ', ' }}
+	{% endif %}
+{% endif %}

@@ -131,7 +131,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 1em 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -3233,4 +3233,35 @@ input, select, textarea {
 	div#lang-selector li {
 		display:inline;
 		margin: 0.5em;
+	}
+
+/* Post preview */
+
+	.post-container {
+    	overflow: auto
+	}
+	.post-container h1,
+	.post-container h2,
+	.post-container h3,
+	.post-container h4,
+	.post-container h5,
+	.post-container h6 {
+    	margin: 0 0 0.5em 0;
+	}
+	.post-container p {
+    	margin: 0 0 0.5em 0;
+	}
+	.post-thumb {
+		float: left;
+	}
+	.post-thumb img {
+	    display: block
+		width: 128px;
+	}
+	.post-content {
+		margin-left: 150px;
+	}
+	.post-title {
+    	font-weight: bold;
+    	font-size: 200%
 	}
