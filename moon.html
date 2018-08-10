@@ -25,15 +25,12 @@ lang: en
         <title>Online Flag Waver</title>
 
         <!-- Libraries -->
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.min.js"></script>
         <script type="text/javascript" src="{{ site.github.url }}/assets/js/three.min.js"></script>
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/rivets.bundled.min.js"></script>
 
         <!-- Main -->
-        <link type="text/css" rel="stylesheet" href="{{ site.github.url }}/assets/css/flagwaver-ui.css" />
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/hashvars.js"></script>
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/flagwaver.js"></script>
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/flagwaver-ui.js"></script>
+		<link type="text/css" rel="stylesheet" href="{{ site.github.url }}/assets/css/moon.css" />
+        <script type="text/javascript" src="{{ site.github.url }}/assets/js/moon.js"></script>
 
     </head>
 
@@ -42,9 +39,16 @@ lang: en
         <div id="main-container" class="wrapper-page bg-picture">
             <main class="page-main">
                 <div class="js-flag-canvas"></div>
-            </main>
+			</main>			
         </div>
 
+		<div id="menu">
+			<h2>Projecto</h2><h2>Nimizuela</h2>
+			<ul id="language-selector">
+				<li><a href="{{ site.github.url }}/es/">Español</a></li>
+				<li><a href="{{ site.github.url }}/">English</a></li>
+			</ul>
+		</div>
     </body>
 
     <script type="x-shader/x-fragment" id="fragmentShaderDepth">

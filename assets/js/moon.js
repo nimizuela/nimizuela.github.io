@@ -1,65 +1,4 @@
-/**
- * Flag Waver
- *
- * Simulate a flag waving in the breeze right in your browser window.
- *
- */
-
-/*
- * Aug 9 2012
- *
- * Its Singapore's National Day, so
- * Making a quick tweaks to simulate the Singapore flag in the wind
- */
-
-/*
- * Aug 3 2012
- *
- * Since I started working for a new startup not too long ago,
- * I commute between home and work for over 2 hours a day.
- * Although this means less time on three.js,
- * I try getting a little coding on the train.
- *
- * This set of experiments started from a simple hook's law doodle,
- * to spring simulation, string simulation, and I realized
- * I once again stepped onto physics and particle simulation,
- * this time, more specifically soft body physics.
- *
- * Based on the "Advanced Character Physics" article,
- * this experiment attempts to use a "massless"
- * cloth simulation model. It's somewhat similiar
- * but simplier to most cloth simulations I found.
- *
- * This was coded out fairly quickly, so expect more to come
- * meanwhile feel free to experiment yourself and share
- *
- * Cheers,
- * Graphics Noob (aka @Blurspline, zz85)
- */
-
-/*
- * Suggested Readings
- *
- * Advanced Character Physics by Thomas Jakobsen Character -
- *     http://web.archive.org/web/20070610223835/http:/www.teknikus.dk/tj/gdc2001.htm
- * http://freespace.virgin.net/hugo.elias/models/m_cloth.htm
- * http://en.wikipedia.org/wiki/Cloth_modeling
- * http://cg.alexandra.dk/tag/spring-mass-system/
- * Real-time Cloth Animation -
- *     http://www.darwin3d.com/gamedev/articles/col0599.pdf
- */
-
-/*
- * Nov 14 2015
- *
- * Modified by /u/krikienoid for use in Flag Waver.
- */
-
-//
-// Flag Waver Tool
-//
-
-;( function ( window, document, THREE, undefined ) {
+;( function ( window, document, $, THREE ) {
 
     //
     // Global settings
@@ -356,7 +295,7 @@
             constraints = this.constraints,
             faces       = this.geometry.faces,
             weightForce = this.weightForce,
-            particle, constraint,
+            particle,
             face, normal,
             i, il;
 
@@ -1220,26 +1159,27 @@
     }
 
     //
-    // Export
+    // Init
     //
 
-    window.flagWaver = {
-        init       : init,
-        setWind    : setWind,
-        animation  : {
-            start  : function () {
-                if ( animationPaused ) {
-                    animationPaused = false;
-                    animate();
-                }
-            },
-            stop   : function () { animationPaused = true; },
-            step   : function () { if ( animationPaused ) animateFrame(); },
-            reset  : function () { flag.reset(); render(); },
-            render : render
-        },
-        get flag () { return publicFlag; },
-        get canvas () { return renderer.domElement; }
-    };
+    $( document ).ready( function () {
+        //
+        // Init
+        //
 
-} )( window, document, THREE );
+        // Init flagWaver and append renderer to DOM
+        init();
+        $( '.js-flag-canvas' ).append( renderer.domElement );
+        window.dispatchEvent( new window.Event( 'resize' ) );
+
+        // Load settings from hash vars on page load
+		publicFlag.setOpts( {
+			imgUploadMode : 'web',
+			imgSrc        : 'images/flag.png',
+			imgFilePath   : '',
+			hoisting      : 'dexter',
+			topEdge       : 'top'
+		} );
+	} );
+
+} )( window, document, jQuery, THREE );
