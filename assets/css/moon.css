@@ -73,8 +73,20 @@ ul#language-selector li {
 
 .bg-picture {
     background-attachment : fixed;
-    background-image      : url('../../images/moon-landing.jpg');
+    background-image      : url('../../images/moon-landing-640x480px.jpg');
     background-position   : center center;
     background-repeat     : no-repeat;
     background-size       : cover;
+}
+
+@media only screen and (min-width : 480px) {
+    .bg-picture {
+        background-image : url('../../images/moon-landing-800x600px.jpg');
+    }
+}
+
+@media only screen and (min-width : 800px) {
+    .bg-picture {
+        background-image : url('../../images/moon-landing-1600x1200px.jpg');
+    }
 }
