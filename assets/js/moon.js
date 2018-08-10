@@ -381,8 +381,8 @@
 
     // Default flag options
     var defaultOptions = {
-        width         : 300,
-        height        : 200,
+        width         : 330,
+        height        : 220,
         mass          : MASS,
         levelOfDetail : 10
     };
