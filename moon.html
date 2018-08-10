@@ -1,6 +1,9 @@
 ---
+title: Proyecto Nimizuela
+description: ...dando a conocer Nimiq en Venezuela
+image: /images/moon.png
 ref: moon
-lang: en
+lang: es
 ---
 
 <!DOCTYPE html>
@@ -12,17 +15,9 @@ lang: en
         <!-- Meta -->
         <meta charset="utf-8" />
         <meta name="viewport"    content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Simulate a flag waving in the breeze right in your browser window." />
+        <meta name="description" content="{{ page.description }}" />
 
-        <!--
-
-        Flag Waver
-
-            Simulate a flag waving in the breeze right in your browser window.
-
-        -->
-
-        <title>Online Flag Waver</title>
+		<title>{{ page.title }}</title>
 
         <!-- Libraries -->
         <script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.min.js"></script>
@@ -30,7 +25,14 @@ lang: en
 
         <!-- Main -->
 		<link type="text/css" rel="stylesheet" href="{{ site.github.url }}/assets/css/moon.css" />
-        <script type="text/javascript" src="{{ site.github.url }}/assets/js/moon.js"></script>
+		<script type="text/javascript" src="{{ site.github.url }}/assets/js/moon.js"></script>
+
+		<!-- Analytics -->
+		{% include analytics.html %}
+
+		<!-- Socials -->
+		{% include opengraph.html %}
+		{% include twittercard.html %}
 
     </head>
 
