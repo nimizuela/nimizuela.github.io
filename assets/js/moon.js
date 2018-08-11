@@ -27,10 +27,6 @@
 		windStrength = 2.5,
 		windForce    = new THREE.Vector3( 0, 0, 0 );
 
-	// Ball settings
-	var ballPosition = new THREE.Vector3( 0, -45, 0 ),
-		ballSize     = 60; //40
-
 	//
 	// Simulation classes
 	//
@@ -335,25 +331,6 @@
 		for ( i = 0, il = constraints.length; i < il; i++ ) {
 			constraints[ i ].satisfy();
 		}
-
-		// Ball constraints
-		ballPosition.z = -window.Math.sin( window.Date.now() / 300 ) * 90; //+40
-		ballPosition.x = window.Math.cos( window.Date.now() / 200 ) * 70;
-
-		/*
-		if ( sphere.visible ) {
-			for ( i = 0, il = particles.length; i < il; i++ ) {
-				particle = particles[ i ];
-				pos = particle.position;
-				diff.subVectors( pos, ballPosition );
-				if ( diff.length() < ballSize ) {
-					// collided
-					diff.normalize().multiplyScalar( ballSize );
-					pos.copy( ballPosition ).add( diff );
-				}
-			}
-		}
-		*/
 	};
 
 	// Render cloth
