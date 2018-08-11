@@ -979,6 +979,21 @@
 		scene.add( light );
 		*/
 
+		// Init background
+        var backgroundMesh = new THREE.Mesh(
+            new THREE.PlaneGeometry(356.36, 263.14, 0),
+            new THREE.MeshBasicMaterial({
+                map: THREE.ImageUtils.loadTexture( 'images/patch.png' )
+			}));
+			
+		backgroundMesh.position.x = 149;
+		backgroundMesh.position.y = 146;
+
+        backgroundMesh.material.depthTest = false;
+        backgroundMesh.material.depthWrite = false;
+
+		scene.add( backgroundMesh );
+
 		// Init flag object
 		flag = new Flag();
 		flag.setTopEdge( 'top' );
@@ -988,9 +1003,30 @@
 		publicFlag = flag.createPublic();
 
 		flag.object.rotation.z = -0.05;
+        flag.object.material.depthTest = false;
+        flag.object.material.depthWrite = false;
 
 		scene.add( flag.object );
-		
+
+		// Init crosshair
+		var scale = 1.18;
+        var crosshairMesh = new THREE.Mesh(
+            new THREE.PlaneGeometry(scale * 72, scale * 70, 0),
+            new THREE.MeshBasicMaterial({
+				map: THREE.ImageUtils.loadTexture( 'images/crosshair.png' ),
+				transparent: true,
+				opacity: 1
+			}));
+			
+		crosshairMesh.position.x = 265;
+		crosshairMesh.position.y = 84;
+
+        crosshairMesh.material.depthTest = false;
+        crosshairMesh.material.depthWrite = false;
+		crosshairMesh.material.trans
+
+		scene.add( crosshairMesh );
+
 		// Init renderer object
 		renderer = new THREE.WebGLRenderer( {
 			antialias : true,
