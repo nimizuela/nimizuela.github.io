@@ -948,7 +948,6 @@
 
 	// Renderer settings
 	var poleOffset  = 260,
-		poleHeight  = 780,
 		topWidth = 100;
 
 	// Renderer variables
@@ -958,9 +957,7 @@
 
 	function init () {
 
-		var light, d,
-			poleGeo, poleMat, poleMesh,
-			topGeo, topMesh;
+		var light, d;
 
 		// Get shaders
 		vertexShader   = document.getElementById( 'vertexShaderDepth' ).textContent;
@@ -1009,39 +1006,13 @@
 		flag = new Flag();
 		flag.setTopEdge( 'top' );
 		flag.setHoisting( 'dexter' );
-		flag.setPosition( 3, 0, 0 );
+		flag.setPosition( -19.5, 258.5, 0 );
 		flag.setTexture( blankTexture );
 		publicFlag = flag.createPublic();
 
-		poleMat = new THREE.MeshPhongMaterial( {
-			color     : 0x9A7A5A,
-			specular  : 0xffffff,
-			metal     : true,
-			shininess : 16
-		} );
+		flag.object.rotation.z = -0.05;
 
-		// Init flag top
-		topWidth = flag.cloth.width + 5;
-		topGeo = new THREE.CylinderGeometry( 3, 3, topWidth );
-		topMesh = new THREE.Mesh( topGeo, poleMat );
-		topMesh.position.y    = 0;
-		topMesh.position.x    = topWidth / 2;
-		topMesh.rotation.z = Math.PI / 2;
-		topMesh.receiveShadow = true;
-		topMesh.castShadow    = true;
-
-		// Init flag pole
-		poleGeo = new THREE.CylinderGeometry( 4.5, 4.5, 10 );
-		poleMesh = new THREE.Mesh( poleGeo, poleMat );
-		poleMesh.position.y    = poleOffset;
-		poleMesh.position.x    = -12;
-		poleMesh.rotation.z    = -0.05;
-		poleMesh.receiveShadow = true;
-		poleMesh.castShadow    = true;
-		poleMesh.add( topMesh );
-		poleMesh.add( flag.object );
-
-		scene.add( poleMesh );
+		scene.add( flag.object );
 		
 		// Init renderer object
 		renderer = new THREE.WebGLRenderer( {
