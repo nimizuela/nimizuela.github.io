@@ -947,7 +947,7 @@
     //
 
     // Renderer settings
-    var poleOffset  = 265,
+    var poleOffset  = 260,
 		poleHeight  = 780,
 		topWidth = 100;
 
@@ -1010,32 +1010,32 @@
         flag = new Flag();
         flag.setTopEdge( 'top' );
         flag.setHoisting( 'dexter' );
-        flag.setPosition( 0, poleHeight / 2, 0 );
+        flag.setPosition( 3, 0, 0 );
         flag.setTexture( blankTexture );
         publicFlag = flag.createPublic();
 
 		poleMat = new THREE.MeshPhongMaterial( {
-            color     : 0x8A7A6A,
+            color     : 0x9A7A5A,
             specular  : 0xffffff,
             metal     : true,
-            shininess : 18
+            shininess : 16
         } );
 
 		// Init flag top
 		topWidth = flag.cloth.width + 5;
         topGeo = new THREE.CylinderGeometry( 3, 3, topWidth );
         topMesh = new THREE.Mesh( topGeo, poleMat );
-        topMesh.position.y    = poleHeight / 2;
+        topMesh.position.y    = 0;
 		topMesh.position.x    = topWidth / 2;
 		topMesh.rotation.z = Math.PI / 2;
         topMesh.receiveShadow = true;
         topMesh.castShadow    = true;
 
 		// Init flag pole
-        poleGeo = new THREE.CylinderGeometry( 4.5, 4.5, poleHeight );
+        poleGeo = new THREE.CylinderGeometry( 4.5, 4.5, 10 );
         poleMesh = new THREE.Mesh( poleGeo, poleMat );
-        poleMesh.position.y    = poleOffset - poleHeight / 2;
-		poleMesh.position.x    = -30;
+        poleMesh.position.y    = poleOffset;
+		poleMesh.position.x    = -12;
 		poleMesh.rotation.z    = -0.05;
         poleMesh.receiveShadow = true;
 		poleMesh.castShadow    = true;
