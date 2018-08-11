@@ -3262,13 +3262,16 @@ input, select, textarea {
 	}
 	.post-thumb {
 		float: left;
+		width: 30%;
+		max-width: 128px;
 	}
 	.post-thumb img {
-	    display: block
-		width: 128px;
+		width: 100%;
 	}
 	.post-content {
-		margin-left: 150px;
+		width: calc(70% - 15px);
+		min-width: calc(100% - 128px - 15px);
+		float: right;
 	}
 	.post-title {
     	font-weight: bold;
