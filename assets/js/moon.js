@@ -980,17 +980,19 @@
 		*/
 
 		// Init background
-        var backgroundMesh = new THREE.Mesh(
-            new THREE.PlaneGeometry(356.36, 263.14, 0),
-            new THREE.MeshBasicMaterial({
-                map: THREE.ImageUtils.loadTexture( 'images/patch.png' )
+		var backgroundMesh = new THREE.Mesh(
+			new THREE.PlaneGeometry(356.36, 263.14, 0),
+			new THREE.MeshBasicMaterial({
+				map: THREE.ImageUtils.loadTexture( 'images/patch.png', {}, function() { backgroundMesh.visible = true; } )
 			}));
-			
+
+		backgroundMesh.visible= false;
+
 		backgroundMesh.position.x = 149;
 		backgroundMesh.position.y = 146;
 
-        backgroundMesh.material.depthTest = false;
-        backgroundMesh.material.depthWrite = false;
+		backgroundMesh.material.depthTest = false;
+		backgroundMesh.material.depthWrite = false;
 
 		scene.add( backgroundMesh );
 
@@ -1003,26 +1005,28 @@
 		publicFlag = flag.createPublic();
 
 		flag.object.rotation.z = -0.05;
-        flag.object.material.depthTest = false;
-        flag.object.material.depthWrite = false;
+		flag.object.material.depthTest = false;
+		flag.object.material.depthWrite = false;
 
 		scene.add( flag.object );
 
 		// Init crosshair
 		var scale = 1.18;
-        var crosshairMesh = new THREE.Mesh(
-            new THREE.PlaneGeometry(scale * 72, scale * 70, 0),
-            new THREE.MeshBasicMaterial({
-				map: THREE.ImageUtils.loadTexture( 'images/crosshair.png' ),
+		var crosshairMesh = new THREE.Mesh(
+			new THREE.PlaneGeometry(scale * 72, scale * 70, 0),
+			new THREE.MeshBasicMaterial({
+				map: THREE.ImageUtils.loadTexture( 'images/crosshair.png', {}, function() { crosshairMesh.visible = true; } ),
 				transparent: true,
 				opacity: 1
 			}));
-			
+
+		crosshairMesh.visible= false;
+
 		crosshairMesh.position.x = 265;
 		crosshairMesh.position.y = 84;
 
-        crosshairMesh.material.depthTest = false;
-        crosshairMesh.material.depthWrite = false;
+		crosshairMesh.material.depthTest = false;
+		crosshairMesh.material.depthWrite = false;
 		crosshairMesh.material.trans
 
 		scene.add( crosshairMesh );
@@ -1043,7 +1047,7 @@
 		// Add event handlers
 		window.addEventListener( 'resize', onResize );
 		window.addEventListener( 'load', onResize );
-		
+
 		onResize();
 
 		// Begin animation
@@ -1097,14 +1101,14 @@
 	function animateFrame () {
 
 		time = window.Date.now();
-		
+
 		if ( !timePrev ) {
 			timePrev = time;
 			return;
 		}
 
 		timestep = ( time - timePrev ) / 1000;
-		
+
 		if ( timestep > TIMESTEP ) {
 			timestep = TIMESTEP;
 
