@@ -16,7 +16,7 @@ lang: es
 		<!-- Libraries -->
 		<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.min.js"></script>
 		<script type="text/javascript" src="{{ site.github.url }}/assets/js/three.min.js"></script>
-		<script src='https://www.google.com/recaptcha/api.js?hl=es-419'></script>
+		<script type="text/javascript" src='https://www.google.com/recaptcha/api.js?hl=es-419'></script>
 		<!-- Main -->
 		<link type="text/css" rel="stylesheet" href="{{ site.github.url }}/assets/css/moon.css" />
 		<script type="text/javascript" src="{{ site.github.url }}/assets/js/moon.js"></script>
@@ -39,7 +39,7 @@ lang: es
 				</div>
 				<div style="display: none;" id="earn">
 					¡Ahora ingresa tu dirección para recibir los NIM!
-					<form action="http://faucet.learnlake.com:8080/venz" method="POST">
+					<form action="http://faucet.learnlake.com:8080/venz" method="POST" onsubmit="javascript:return submitForm(this);">
 						<input type="text" placeholder="&lt; dirección &gt;" name="addr" id="addr"/>
 						<div class="center-recaptcha">
 							<div class="g-recaptcha" data-sitekey="6LdlolMUAAAAABXcooP5D-iO1Jntcq_Tvq-FA_Ea" data-theme="dark"></div>
@@ -47,6 +47,8 @@ lang: es
 						<button class="btn" type="submit" value="Get NIM!">¡Obtener los NIM!</button>
 					</form>
 					<a href="https://nimizuela.github.io/es/2018/08/04/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web.html" target="_blank">...o crea una cuenta si aún no la tienes.</a>
+				</div>
+				<div style="display: none;" id="confirmation">
 				</div>
 			</div>
 		</div>
@@ -80,6 +82,58 @@ lang: es
 		vUV = 0.75 * uv;
 		vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
 		gl_Position = projectionMatrix * mvPosition;
+		}
+	</script>
+	<script type="text/javascript">
+		function submitForm(formElement) {
+			var iframe = document.createElement("iframe");
+			var uniqueString = "iframe-id";
+			document.body.appendChild(iframe);
+			iframe.style.display = "none";
+			iframe.contentWindow.name = uniqueString;
+			formElement.target = uniqueString;
+
+			var inter = window.setInterval(function() {
+				if (iframe.contentWindow.document.readyState === "complete") {
+					window.clearInterval(inter);
+					var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+					var content = iframeDocument.innerHTML;
+	  				if (typeof content !== "undefined") {
+						document.getElementById('earn').style.display = 'none';
+						var confirmationElement = document.getElementById('confirmation');
+						confirmationElement.style.display = 'block';
+						confirmationElement.innerText = "¡Tu solicitud fue procesada con éxito!";
+					} else {
+						document.getElementById('earn').style.display = 'none';
+						var confirmationElement = document.getElementById('confirmation');
+						confirmationElement.style.display = 'block';
+						confirmationElement.innerText = "¡Has hecho demasiadas solicitudes! ...Prueba de nuevo más tarde.";
+					}
+				}
+			}, 100);
+
+			formElement.submit();
+			return false;
+
+			/*
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function() {
+				document.getElementById('earn').style.display = 'none';
+				var confirmationElement = document.getElementById('confirmation');
+				confirmationElement.style.display = 'block';
+				confirmationElement.innerText = "¡Tu solicitud fue procesada con éxito!";
+			}
+			xhr.onerror = function(){
+				document.getElementById('earn').style.display = 'none';
+				var confirmationElement = document.getElementById('confirmation');
+				confirmationElement.style.display = 'block';
+				confirmationElement.innerText = "¡Has hecho demasiadas solicitudes! ...Prueba de nuevo más tarde.";
+			}
+			xhr.open(formElement.method, formElement.action, true);
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.send("addr=" + formElement.elements["addr"].value + "&g-recaptcha-response=" + formElement.elements["g-recaptcha-response"].value);
+			return false;
+			*/
 		}
 	</script>
 </html>
