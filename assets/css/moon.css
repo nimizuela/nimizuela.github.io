@@ -29,21 +29,22 @@ body,
 
 html,
 body {
-    background-color : #222222;
+	background-color : #222222;
 }
 
 /* //// Typography and Style //// */
 
 body {
-    color       : rgba(1, 1, 1, 0.5);
+	color: white;
     font-family : 'Open Sans', Helvetica, Arial, sans-serif;
     font-size   : 18pt;
-    line-height : 18pt;
+	line-height : 18pt;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 h1, h2, h3, h4, h5, h6,
 p, a {
-	color       : #ffffff;
+	color       : white;
 	margin-bottom: 0.5em;
 }
 
@@ -63,10 +64,75 @@ ul#language-selector li {
 	line-height : 30pt;
 }
 
-#menu {
+.header {
+	background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.menu {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+}
+
+.faucet {
+	font-size: 0.8em;
+	padding: 0.2em 0 0.2em 0;
+	display: inline-block;
+}
+
+#addr {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ffc302;
+	color: #ffc302;
+	text-align: center;
+	display:table-cell;
+	width: 100%;
+}
+
+::placeholder {
+    color: #ffc302;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ffc302;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #ffc302;
+}
+
+.btn {
+    font: 1rem 'Fira Sans', sans-serif;
+    padding: .5rem;
+	background-color: #ffc302;
+	color: white;
+    border: none;
+    border-radius: 4px;
+	margin: 4px;
+	font-weight: bolder;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+	width: 100%;
+}
+
+.center-recaptcha {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.g-recaptcha {
+	display: inline-block;
+}
+
+input[type="text"] {
+    font-size: 0.8em;
 }
 
 /* //// Background Image //// */
