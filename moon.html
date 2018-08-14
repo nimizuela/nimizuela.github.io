@@ -10,9 +10,9 @@ lang: es
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8" />
-		<meta name="viewport"    content="width=device-width, initial-scale=1" />
+		<meta name="viewport"	content="width=device-width, initial-scale=1" />
 		<meta name="description" content="{{ page.description }}" />
-		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 		<title>{{ page.title }}</title>
 		<!-- Libraries -->
 		<script type="text/javascript" src="{{ site.github.url }}/assets/js/jquery.min.js"></script>
@@ -36,6 +36,10 @@ lang: es
 		<div class="header">
 			<div class="faucet">
 				<div id="follow">
+					¡<a href="https://nimiq-faucet.surge.sh/venz/">Síguenos en Twitter</a> y consigue NIM gratis!<br>
+				</div>
+<!--
+				<div id="follow">
 					¡<a href="https://twitter.com/nimizuela" target="_blank" onclick="javascript:document.getElementById('earn').style.display = 'block';document.getElementById('follow').style.display = 'none';">Síguenos en Twitter</a> y consigue NIM gratis!<br>
 				</div>
 				<div style="display: none;" id="earn">
@@ -51,6 +55,7 @@ lang: es
 				</div>
 				<div style="display: none;" id="confirmation">
 				</div>
+-->
 			</div>
 		</div>
 		<div class="menu">
@@ -85,6 +90,7 @@ lang: es
 		gl_Position = projectionMatrix * mvPosition;
 		}
 	</script>
+<!--
 	<script type="text/javascript">
 		function submitForm(formElement) {
 			var iframe = document.createElement("iframe");
@@ -137,4 +143,5 @@ lang: es
 			*/
 		}
 	</script>
+-->
 </html>
