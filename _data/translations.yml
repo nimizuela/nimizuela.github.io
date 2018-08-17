@@ -23,6 +23,7 @@ en:
     - October
     - November
     - December
+  read_more: ...more
 es:
   title: Proyecto Nimizuela
   description: >
@@ -48,3 +49,4 @@ es:
     - Octubre
     - Noviembre
     - Diciembre
+  read_more: ...leer más

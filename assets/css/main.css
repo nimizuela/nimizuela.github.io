@@ -3283,3 +3283,9 @@ input, select, textarea {
 		font-size: 1.5em;
 		margin: 0 0.25em;
 	}
+
+.more {
+	margin-left: 0.25em;
+	font-size: 0.75em;
+	font-style: italic;
+}
