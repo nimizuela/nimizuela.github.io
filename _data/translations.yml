@@ -1,52 +1,85 @@
 en:
-  title: Project Nimizuela
+  title: 'Project Nimizuela'
   description: >
     **Project Nimizuela**<br>
     *...raising awareness about*<br>
     ***Nimiq*** *in* ***Venezuela***
-  copyright: Project Nimizuela
-  design: Design
-  language_name: English
-  locale: en_US
-  next: Next
-  prev: Previous
-  months:
-    - January
-    - February
-    - March
-    - April
-    - May
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
-  read_more: ...more
+  copyright: 'Project Nimizuela'
+  design: 'Design'
+  language_name: 'English'
+  locale: 'en_US'
+  next: 'Next'
+  prev: 'Previous'
+  month_names:
+    - 'January'
+    - 'February'
+    - 'March'
+    - 'April'
+    - 'May'
+    - 'June'
+    - 'July'
+    - 'August'
+    - 'September'
+    - 'October'
+    - 'November'
+    - 'December'
+  of_month: ''
+  read_more: '...more'
+  since: ''
+  ago: 'ago'
+  on_date: 'on'
+  year: 'year'
+  years: 'years'
+  month: 'month'
+  months: 'months'
+  day: 'day'
+  days: 'days'
+  hour: 'hour'
+  hours: 'hour'
+  minute: 'minute'
+  minutes: 'minutes'
+  second: 'second'
+  seconds: 'second'
+
 es:
-  title: Proyecto Nimizuela
+  title: 'Proyecto Nimizuela'
   description: >
     **Proyecto Nimizuela**<br>
     *...dando a conocer*<br>
     ***Nimiq*** *en* ***Venezuela***
-  copyright: Proyecto Nimizuela
-  design: Diseño
-  language_name: Español
-  locale: es_LA
-  next: Siguiente
-  prev: Anterior
-  months:
-    - Enero
-    - Febrero
-    - Marzo
-    - Abril
-    - Mayo
-    - Junio
-    - Julio
-    - Agosto
-    - Septiembre
-    - Octubre
-    - Noviembre
-    - Diciembre
-  read_more: ...leer más
+  copyright: 'Proyecto Nimizuela'
+  design: 'Diseño'
+  language_name: 'Español'
+  locale: 'es_LA'
+  next: 'Siguiente'
+  prev: 'Anterior'
+  month_names:
+    - 'Enero'
+    - 'Febrero'
+    - 'Marzo'
+    - 'Abril'
+    - 'Mayo'
+    - 'Junio'
+    - 'Julio'
+    - 'Agosto'
+    - 'Septiembre'
+    - 'Octubre'
+    - 'Noviembre'
+    - 'Diciembre'
+  of_month: 'de'
+  read_more: '...leer más'
+  since: 'Hace'
+  ago: 'atrás'
+  on_date: 'el'
+  year: 'año'
+  years: 'años'
+  month: 'mes'
+  months: 'meses'
+  day: 'día'
+  days: 'días'
+  hour: 'hora'
+  hours: 'horas'
+  minute: 'minuto'
+  minutes: 'minutos'
+  second: 'segundo'
+  seconds: 'segundos'

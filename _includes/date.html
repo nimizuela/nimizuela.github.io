@@ -3,7 +3,8 @@
 {% else %}
 	{% assign entry = page %}
 {% endif %}
+<span class="postedago" datetime="{{ entry.date | date_to_xmlschema }}"></span>
 {% assign m = entry.date | date: "%-m" | minus: 1 %}
 {{ entry.date | date: "%-d" }}
-{{ site.data.translations[entry.lang].months[m] }}
+{{ site.data.translations[entry.lang].of_month }} {{ site.data.translations[entry.lang].month_names[m] }}
 {{ entry.date | date: "%Y" }}

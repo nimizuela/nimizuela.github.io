@@ -114,4 +114,42 @@
 
 			});
 
+		// Elapsed time since posted
+			$window.on('load', function() {
+				function ago(date) {
+					function render(n, unit) {
+						return datedata.since + " " + n + " " + unit + " " + datedata.ago;
+					}
+				
+					var seconds = Math.floor((new Date() - date) / 1000);
+				
+					var interval = Math.floor(seconds / (60 * 60 * 24 * 30 * 365));
+					if (Math.floor(seconds / (60 * 60 * 24 * 30 * 365)) >= 1) {
+						return render(interval, (interval == 1) ? datedata.year : datedata.years);
+					}
+					interval = Math.floor(seconds / (60 * 60 * 24 * 30));
+					if (interval >= 1) {
+						return render(interval, (interval == 1) ? datedata.month : datedata.months);
+					}
+					interval = Math.floor(seconds / (60 * 60 * 24));
+					if (interval >= 1) {
+						return render(interval, (interval == 1) ? datedata.day : datedata.days);
+					}
+					interval = Math.floor(seconds / (60 * 60));
+					if (interval >= 1) {
+						return render(interval, (interval == 1) ? datedata.hour : datedata.hours);
+					}
+					interval = Math.floor(seconds / 60);
+					if (interval >= 1) {
+						return render(interval, (interval == 1) ? datedata.minute : datedata.minutes);
+					}
+					interval = Math.floor(seconds);
+					return render(interval, (interval == 1) ? datedata.second : datedata.seconds);
+				}				
+				$(".postedago").map(function() {
+					var date = Date.parse(this.getAttribute("datetime"));
+					this.innerHTML = ago(date) + " " + datedata.on_date + " ";
+				}).get();
+			});
+
 })(jQuery);
