@@ -118,7 +118,7 @@
 			$window.on('load', function() {
 				function ago(date) {
 					function render(n, unit) {
-						return datedata.since + " " + n + " " + unit + " " + datedata.ago;
+						return datedata.since_date + " " + n + " " + unit + " " + datedata.time_ago;
 					}
 				
 					var seconds = Math.floor((new Date() - date) / 1000);
