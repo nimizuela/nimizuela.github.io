@@ -7,6 +7,11 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.github.url }}/assets/css/ie8.css" /><![endif]-->
 <link rel="alternate" type="application/atom+xml" href="{{ site.github.url }}/atom.xml" title="Sitewide ATOM Feed" />
 <link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/rss.xml" title="Sitewide RSS Feed" />
+<link rel="icon" href="/images/icons/16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="/images/icons/32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/icons/48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="/images/icons/128.png" sizes="128x128" type="image/png">
+<link rel="icon" href="/images/icons/windows.ico" sizes="16x16 32x32 48x48" type="image/icon">
 {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
 {% for entry in posts %}
 	{% if entry.lang != page.lang %}
