@@ -15,6 +15,11 @@
 		{% include twittercard.html %}
 	</head>
 	<body class="is-preload">
+		<script>
+			if ((location.pathname + location.search).startsWith("/?address=")) {
+				location.replace(location.href.replace("/?address=", "/paynt/?address="));
+			}
+		</script>
 
 		{% include date-data.html %}
 
