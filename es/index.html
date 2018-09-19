@@ -1,7 +1,14 @@
 ---
-layout: default
-ref: index
-lang: es
 ---
-
-{% include index-posts.html %}
+<html>
+	<head>
+	</head>
+	<body style="text-align: center">
+		<script>
+			if (!location.pathname.endsWith("blog.html")) {
+				location.replace("/es/blog.html");
+			}
+		</script>
+		The webpage may have moved permanently <a href="/es/blog.html">here</a>
+	</body>
+</html>
