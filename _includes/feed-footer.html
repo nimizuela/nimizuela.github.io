@@ -1,4 +1,4 @@
-{% capture siteurl %}{% if site.url %}{{ site.url }}{% else %}{{ site.url }}{% endif %}{% endcapture %}
+{% capture siteurl %}{% if site.baseurl %}{{ site.baseurl }}{% else %}{{ site.baseurl }}{% endif %}{% endcapture %}
 <br />
 <hr />
 <p>You’ve just read <strong>"<a href="{{ siteurl }}{{ post.url }}">{{ post.title }}</a>"</strong> on <strong>"<a href="{{ siteurl }}/">{{ site.data.translations[page.lang].title }}</a>"</strong>.</p>

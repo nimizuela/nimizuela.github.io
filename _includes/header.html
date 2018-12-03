@@ -1,7 +1,7 @@
 <!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<a href="{{ site.url }}/{% if page.lang == 'es' %}es/{% endif %}blog.html" class="image logo"><img src="{{ site.url }}/images/logo.png" alt="" /></a>
+			<a href="{{ site.baseurl }}/{% if page.lang == 'es' %}es/{% endif %}blog.html" class="image logo"><img src="{{ site.baseurl }}/images/logo.png" alt="" /></a>
 			<h1>{{ site.data.translations[page.lang].description | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
 		</div>
 	</header>

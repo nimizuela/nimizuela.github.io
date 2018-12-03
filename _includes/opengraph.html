@@ -3,5 +3,5 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.translations[page.lang].title }}{% endif %}" />
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.data.translations[page.lang].description | markdownify | strip_html }}{% endif %}" />
 <meta property="og:site_name" content="{{ site.data.translations[page.lang].title }}" />
-<meta property="og:url" content="{{site.url }}{{ page.url }}" />
-<meta property="og:image" content="{{site.url }}{% if page.image %}{{ page.image }}{% else %}{{ '/images/logo.png' }}{% endif %}" />
+<meta property="og:url" content="{{site.baseurl }}{{ page.url }}" />
+<meta property="og:image" content="{{site.baseurl }}{% if page.image %}{{ page.image }}{% else %}{{ '/images/logo.png' }}{% endif %}" />

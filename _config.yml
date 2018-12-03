@@ -6,7 +6,8 @@ description: >
 copyright: Project Nimizuela
 sass:
   sass_dir: assets/sass
-url: https://nimizuela.org
+url: ""
+baseurl: /
 disqus_shortname:
 facebook_username: nimizuela
 twitter_username: nimizuela
