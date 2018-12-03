@@ -4,12 +4,12 @@
 	{% for post in group.items %}
 		{% if post.lang == page.lang %}
 		<section class="post-container">
-			<div class="post-thumb"><img src="{{ site.github.url }}/images/thumbs/{{ post.ref }}.jpg" alt="" /></div>
+			<div class="post-thumb"><img src="{{ site.url }}/images/thumbs/{{ post.ref }}.jpg" alt="" /></div>
 			<div class="post-content">
 				{% if post.pin %}<i class="post-pin fa fa-thumb-tack"></i>{% endif %}
-				<h2><a href="{{ post.url | prepend: site.github.url }}">{{ post.title }}</a></h2>
+				<h2><a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></h2>
 				<div>
-					{{ post.excerpt }} <a href="{{ post.url | prepend: site.github.url }}" class="more">{{ site.data.translations[post.lang].read_more }}</a>
+					{{ post.excerpt }} <a href="{{ post.url | prepend: site.url }}" class="more">{{ site.data.translations[post.lang].read_more }}</a>
 				</div>
 				<p>
 					<span><i class="fa fa-calendar"></i> {% include date.html %} {% include categories.html %}</span>
